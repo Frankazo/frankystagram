@@ -20,7 +20,14 @@
  
         <div class="row">
             <div class="col-4">
-<img src="https://instagram.fnyc1-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.180.1440.1440a/s640x640/91891719_528605217709638_4142275141436633811_n.jpg?_nc_ht=instagram.fnyc1-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=Rz7vb8FuxTgAX-NmheA&edm=ABfd0MgBAAAA&ccb=7-4&oh=f0141bfefcb0bbffe4098c70e8395528&oe=61181B04&_nc_sid=7bff83" alt="">            </div>
-    </div>
+                <img src="https://images.unsplash.com/photo-1606787619248-f301830a5a57?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="pic">            
+            </div>
+            <div class="col-4">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Zm9vZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="pic">            
+            </div>
+            <div class="col-4">
+                <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGZvb2R8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="pic">            
+            </div>
+        </div>
 </div>
 @endsection
