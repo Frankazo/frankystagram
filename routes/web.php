@@ -19,4 +19,19 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// older form to reference a controller 
+// Route::get('/p', "PostsController@create");
+
+// create new post route
+Route::get('/p/create', [App\Http\Controllers\PostsController::class, 'create']);
+
+// show post route
+Route::get('/p/{post}', [App\Http\Controllers\PostsController::class, 'show']);
+Route::post('/p', [App\Http\Controllers\PostsController::class, 'store']);
+
+// profile route
 Route::get('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile.show');
+
+// edit profile route
+Route::get('/profile/{user}/edit', [App\Http\Controllers\ProfilesController::class, 'edit'])->name('profile.edit');
+Route::patch('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'update'])->name('profile.update');
