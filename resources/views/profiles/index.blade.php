@@ -9,28 +9,27 @@
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">
                 <h1>{{ $user->username }}</h1>
-                <a href="#">New Post</a>
+                <a href="/p/create">New Post</a>
             </div>
             <div class="d-flex">
-                <div class="pr-5"><strong>157</strong> posts</div>
+                <div class="pr-5"><strong>{{ $user->posts->count() }}</strong> posts</div>
                 <div class="pr-5"><strong>474</strong> followers</div>
                 <div class="pr-5"><strong>381</strong> following</div>
             </div>
             <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
             <div>{{ $user->profile->description }}</div>
             <div><a href="#" target='_blank'>{{ $user->profile->url }}</a></div>
+            <a href="/profile/{{ $user->id }}/edit">Edit</a>
         </div>
  
         <div class="row pt-5">
-            <div class="col-4">
-                <img src="https://images.unsplash.com/photo-1606787619248-f301830a5a57?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="w-100">            
+            @foreach($user->posts as $post)
+            <div class="col-4 pb-4">
+                <a href="/p/{{ $post->id }}">
+                    <img src="/storage/{{ $post->image }}" class="w-100"> 
+                </a>      
             </div>
-            <div class="col-4">
-                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Zm9vZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="w-100">            
-            </div>
-            <div class="col-4">
-                <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGZvb2R8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="w-100">            
-            </div>
+            @endforeach
         </div>
 </div>
 @endsection
